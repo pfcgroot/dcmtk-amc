@@ -560,6 +560,11 @@ static const UIDNameMap uidNameMap[] = {
     { UID_DRAFT_UnifiedProcedureStepPullSOPClass,              "DRAFT_UnifiedProcedureStepPullSOPClass" },
     { UID_DRAFT_UnifiedProcedureStepEventSOPClass,             "DRAFT_UnifiedProcedureStepEventSOPClass" },
 
+    // Private Philips Medical Systems UIDs (PMS)
+    { UID_PMS_MRSpectrumStorage,                                "PMS_MRSpectrumStorage" },
+    { UID_PMS_MRSeriesDataStorage,                              "PMS_MRSeriesDataStorage" },
+    { UID_PMS_MRExamcardStorage,                                "PMS_MRExamcardStorage" },
+
     { NULL, NULL }
 };
 
@@ -746,6 +751,10 @@ const char* dcmAllStorageSOPClassUIDs[] = {
     // DICONDE
     UID_DICONDE_EddyCurrentImageStorage,
     UID_DICONDE_EddyCurrentMultiframeImageStorage,
+    // Private Philips UIDs (PMS)
+    UID_PMS_MRSpectrumStorage,
+    UID_PMS_MRSeriesDataStorage,
+    UID_PMS_MRExamcardStorage,
     NULL
 };
 
@@ -954,6 +963,10 @@ const char* dcmLongSCUStorageSOPClassUIDs[] = {
     // DICONDE
 //  UID_DICONDE_EddyCurrentImageStorage,
 //  UID_DICONDE_EddyCurrentMultiframeImageStorage,
+    // Private Philips UIDs (PMS)
+//  UID_PMS_MRSpectrumStorage,
+//  UID_PMS_MRSeriesDataStorage,
+//  UID_PMS_MRExamcardStorage,
     NULL
 };
 
@@ -1324,6 +1337,10 @@ static const DcmModalityTable modalities[] = {
     { UID_DICOS_2DAITStorage,                                      "AI2", 4096 },
     { UID_DICOS_3DAITStorage,                                      "AI3", 4096 },
     { UID_DICOS_QuadrupoleResonanceStorage,                        "QR",  4096 },
+    // Private Philips SOP classes
+    { UID_PMS_MRSpectrumStorage,                                   "PhS", 4096 },
+    { UID_PMS_MRSeriesDataStorage,                                 "PhD", 4096 },
+    { UID_PMS_MRExamcardStorage,                                   "PhX", 4096 },
     // DICONDE
     { UID_DICONDE_EddyCurrentImageStorage,                         "EC",  512 * 512 },
     { UID_DICONDE_EddyCurrentMultiframeImageStorage,               "ECm", 512 * 512 }

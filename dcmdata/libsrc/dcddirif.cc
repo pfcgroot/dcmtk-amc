@@ -730,6 +730,10 @@ static E_DirRecType sopClassToRecordType(const OFString &sopClass)
         result = ERT_Fiducial;
     else if (compare(sopClass, UID_RawDataStorage))
         result = ERT_RawData;
+    else if (compare(sopClass, UID_PMS_MRSpectrumStorage) ||
+             compare(sopClass, UID_PMS_MRSeriesDataStorage) ||
+             compare(sopClass, UID_PMS_MRExamcardStorage))
+        result = ERT_RawData;
     else if (compare(sopClass, UID_MRSpectroscopyStorage))
         result = ERT_Spectroscopy;
     else if (compare(sopClass, UID_EncapsulatedPDFStorage) ||
@@ -1668,6 +1672,9 @@ OFCondition DicomDirInterface::checkSOPClassAndXfer(DcmMetaInfo *metainfo,
                     {
                         found = compare(mediaSOPClassUID, UID_KeyObjectSelectionDocumentStorage) ||
                                 compare(mediaSOPClassUID, UID_RawDataStorage) ||
+                                compare(mediaSOPClassUID, UID_PMS_MRSpectrumStorage) ||
+                                compare(mediaSOPClassUID, UID_PMS_MRSeriesDataStorage) ||
+                                compare(mediaSOPClassUID, UID_PMS_MRExamcardStorage) ||
                                 compare(mediaSOPClassUID, UID_MRSpectroscopyStorage) ||
                                 compare(mediaSOPClassUID, UID_RealWorldValueMappingStorage) ||
                                 compare(mediaSOPClassUID, UID_HangingProtocolStorage) ||

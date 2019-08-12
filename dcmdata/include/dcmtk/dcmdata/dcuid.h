@@ -808,6 +808,15 @@ DCMTK_DCMDATA_EXPORT unsigned long dcmGuessModalityBytes(const char *sopClassUID
 // Private SOP Class UID used to shutdown external network applications
 #define UID_PrivateShutdownSOPClass                                "1.2.276.0.7230010.3.4.1915765545.18030.917282194.0"
 
+/*
+** Private UIDs Philips Medical Systems (PMS)
+*/
+
+/* Private SOP Class UIDs PMS */
+#define UID_PMS_MRSpectrumStorage                                  "1.3.46.670589.11.0.0.12.1"
+#define UID_PMS_MRSeriesDataStorage                                "1.3.46.670589.11.0.0.12.2"
+#define UID_PMS_MRExamcardStorage                                  "1.3.46.670589.11.0.0.12.4"
+
 
 /* DRAFT SUPPLEMENTS - EXPERIMENTAL USE ONLY */
 
